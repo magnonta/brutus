@@ -47,18 +47,19 @@ jobs:
     
     - name: Deploy GH-Pages
       uses: peaceiris/actions-gh-pages@v3
-      run: |
-        git config --global user.name $user_name
-        git config --global user.email $user_email
-        git remote set-url origin https://${github_token}@github.com/${repository}
-        pwd
-        echo -e 'home brutus'
-        ls -la /home/runner/work/brutus/brutus/
-        pwd
-        echo -e 'home build'
-        pwd
-        npm run deploy
+      # run: |
+      #   git config --global user.name $user_name
+      #   git config --global user.email $user_email
+      #   git remote set-url origin https://${github_token}@github.com/${repository}
+      #   pwd
+      #   echo -e 'home brutus'
+      #   ls -la /home/runner/work/brutus/brutus/
+      #   pwd
+      #   echo -e 'home build'
+      #   pwd
+      #   npm run deploy
       with:
+        github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         publish_dir: ./static
       env:
         user_name: 'github-actions[bot]'
