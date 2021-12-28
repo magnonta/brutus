@@ -21,6 +21,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+        
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -29,7 +32,6 @@ jobs:
         
     - name: install dependencies
       run: npm install
-    - run: npm run build
     
     - name: Deploy GH-Pages
       run: |
