@@ -35,6 +35,15 @@ jobs:
         
     - name: install dependencies
       run: npm install
+
+    - name: clean cache
+      run: npm cache clean --force
+
+    -name: install -g
+      run: npm install -g npm
+    
+    - name: install dependencies
+      run: npm install
     
     - name: Deploy GH-Pages
       run: |
