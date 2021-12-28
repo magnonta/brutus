@@ -44,6 +44,9 @@ jobs:
     
     - name: install dependencies
       run: npm install
+
+    - name: build
+      run: npm run build
     
     - name: Deploy GH-Pages
       uses: peaceiris/actions-gh-pages@v3
@@ -60,7 +63,8 @@ jobs:
       #   npm run deploy
       with:
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
-        publish_dir: ./static
+        publish_dir: ./dist
+        enable_jekyll: true
       env:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
