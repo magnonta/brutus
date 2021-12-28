@@ -39,7 +39,7 @@ jobs:
     - name: clean cache
       run: npm cache clean --force
 
-    -name: install -g
+    - name: install -g
       run: npm install -g npm
     
     - name: install dependencies
