@@ -55,8 +55,6 @@ jobs:
         ls -la /home/runner/work/brutus/brutus/
         pwd
         echo -e 'home build'
-        mkdir /home/runner/work/brutus/brutus/build
-        cp -r * /home/runner/work/brutus/brutus/build/
         pwd
         npm run deploy
       env:
