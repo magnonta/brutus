@@ -50,10 +50,14 @@ jobs:
         git config --global user.name $user_name
         git config --global user.email $user_email
         git remote set-url origin https://${github_token}@github.com/${repository}
+        pwd
         echo -e 'home brutus'
         ls -la /home/runner/work/brutus/brutus/
+        pwd
         echo -e 'home build'
-        ls -la /home/runner/work/brutus/brutus/build
+        pwd
+        ls -la /home/runner/work/brutus/brutus/build/
+        pwd
         npm run deploy
       env:
         user_name: 'github-actions[bot]'
