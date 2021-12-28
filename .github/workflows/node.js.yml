@@ -46,6 +46,7 @@ jobs:
       run: npm install
     
     - name: Deploy GH-Pages
+      uses: peaceiris/actions-gh-pages@v3
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
@@ -57,6 +58,8 @@ jobs:
         echo -e 'home build'
         pwd
         npm run deploy
+      with:
+        publish_dir: ./static
       env:
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
