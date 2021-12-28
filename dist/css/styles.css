@@ -7377,8 +7377,6 @@ textarea.form-control-lg {
 
 .mb-5 {
   margin-bottom: 3rem !important;
-  color: #000;
-  text-shadow: #0c4128;
 }
 
 .mb-auto {
@@ -11305,15 +11303,15 @@ textarea.form-control-lg {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/LinkedInBackground.png") no-repeat center center;
+  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
 header.masthead:before {
   content: "";
-  position: relative;
-  /* background-color: #1c375e; */
+  position: absolute;
+  background-color: #1c375e;
   height: 100%;
   width: 100%;
   top: 0;
@@ -11378,6 +11376,6 @@ header.masthead h1, header.masthead .h1 {
 }
 
 footer.footer {
-  padding-top: 25rem;
-  padding-bottom: 40rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
