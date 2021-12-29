@@ -1,5 +1,5 @@
 /*!
-* Start Bootstrap - Brutus Wear v0.0.1 (https://myusername.github.io/brutus)
+* Start Bootstrap - Brutus Wear v0.0.1 (https://myusername.github.io)
 * Copyright 2013-2021 
 * Licensed under ISC (https://github.com/StartBootstrap/brutus/blob/master/LICENSE)
 */
