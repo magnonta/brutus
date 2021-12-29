@@ -50,17 +50,6 @@ jobs:
     
     - name: Deploy GH-Pages
       uses: peaceiris/actions-gh-pages@v3
-      # run: |
-      #   git config --global user.name $user_name
-      #   git config --global user.email $user_email
-      #   git remote set-url origin https://${github_token}@github.com/${repository}
-      #   pwd
-      #   echo -e 'home brutus'
-      #   ls -la /home/runner/work/brutus/brutus/
-      #   pwd
-      #   echo -e 'home build'
-      #   pwd
-      #   npm run deploy
       with:
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         publish_dir: ./dist
@@ -70,3 +59,10 @@ jobs:
         user_email: 'github-actions[bot]@users.noreply.github.com'
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         repository: ${{ github.repository }}
+    
+    - name: Deploy Heroku
+      uses: akhileshns/heroku-deploy@v3.12.12
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "brutuswear"
+        heroku_email: "magnonta@gmail.com"
