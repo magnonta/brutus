@@ -3,7 +3,7 @@
     "name": "brutus",
     "version": "0.0.1",
     "scripts": {
-        "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
+        "build": "npm run cache clean --force && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
         "build:scripts": "node scripts/build-scripts.js",
@@ -11,7 +11,7 @@
         "clean": "node scripts/clean.js",
         "start": "npm run build && node scripts/start.js",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
+        "deploy": "ls -la && gh-pages -d build",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
     "description": "An HTML landing page template built with Bootstrap",
@@ -23,7 +23,7 @@
         "theme",
         "template"
     ],
-    "homepage": "https://myusername.github.io/brutus",
+    "homepage": "https://myusername.github.io",
     "repository": {
         "type": "git",
         "url": "https://github.com/magnonta/brutus.git"
