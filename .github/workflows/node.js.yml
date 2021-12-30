@@ -30,17 +30,17 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     
-    - name: npm init
-      run: npm init -y
+    # - name: npm init
+    #   run: npm init -y
         
-    - name: install dependencies
-      run: npm install
+    # - name: install dependencies
+    #   run: npm install
 
-    - name: clean cache
-      run: npm cache clean --force
+    # - name: clean cache
+    #   run: npm cache clean --force
 
-    - name: install -g
-      run: npm install -g npm
+    # - name: install -g
+    #   run: npm install -g npm
     
     - name: install dependencies
       run: npm install
