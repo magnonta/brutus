@@ -59,10 +59,12 @@ jobs:
         user_email: 'github-actions[bot]@users.noreply.github.com'
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         repository: ${{ github.repository }}
-    
+
     - name: Deploy Heroku
-      uses: CDNievas/heroku-action@v1.0
+      uses: onekiloparsec/heroku-node-deploy-subfolder@v1.1.0
       with:
-        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "brutuswear"
-        heroku_email: "magnonta@gmail.com"
+        api_key: ${{secrets.HEROKU_API_KEY}}
+        app_name: "brutuswear"
+        email: "magnonta@gmail.com"
+        heroku_branch: "main"
+        subfolder: "dist"
