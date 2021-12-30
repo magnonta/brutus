@@ -61,7 +61,7 @@ jobs:
         repository: ${{ github.repository }}
     
     - name: Deploy Heroku
-      uses: CDNievas/heroku-action@v1.0
+      uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "brutuswear"
