@@ -65,6 +65,6 @@ jobs:
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "brutuswear"
-        heroku_email: "magnonta@gmail.com"
+        email: "magnonta@gmail.com"
         dockerfile_directory: ./
         dockerfile_name: Dockerfile
